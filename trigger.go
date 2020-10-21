@@ -59,7 +59,7 @@ func (trigger *Trigger) AddListener(event, listener interface{}) *Trigger {
 		}
 	}
 
-	// 判断此事件是否超过最大监听数量, 如果超过打印warning或者调用recoverer
+	// 判断此事件是否超过最大监听数量, 如果超过panic或者调用recoverer
 	if trigger.maxListeners != -1 && trigger.maxListeners < len(trigger.events[event])+1 {
 		if nil == trigger.recoverer {
 			panic(ErrExceedMaxListeners)
