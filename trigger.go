@@ -270,7 +270,7 @@ func (trigger *Trigger) GetListenersByEvent(event interface{}) []reflect.Value {
 }
 
 //***************************************************
-//Description : 设置panic处理函数
+//Description : 设置错误处理函数
 //param :       处理函数
 //return :      事件触发器
 //***************************************************
