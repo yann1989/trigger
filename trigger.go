@@ -12,8 +12,8 @@ import (
 const defaultMaxListeners = 16
 
 // 错误
-var ErrNotFunction = errors.New("传入参数不是函数类型.")
-var ErrExceedMaxListeners = errors.New("此事件超过最大监听数量.")
+var ErrNotFunction = errors.New("传入参数不是函数类型")
+var ErrExceedMaxListeners = errors.New("此事件超过最大监听数量")
 
 // 错误处理函数
 type RecoveryFunc func(interface{}, interface{}, error)
