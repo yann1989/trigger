@@ -20,7 +20,7 @@ type RecoveryFunc func(interface{}, interface{}, error)
 
 // 默认错误处理函数
 var defaultRecoveryFunc RecoveryFunc = func(event interface{}, listener interface{}, err error) {
-	fmt.Fprintf(os.Stdout, "Error: 事件[%v]\n错误: %v.\n", event, err)
+	fmt.Fprintf(os.Stdout, "Error: 事件[%v]\n%v.\n", event, err)
 }
 
 // 事件触发器

@@ -33,4 +33,8 @@ func TestTrigger(t *testing.T) {
 		Emit("happy", "先触发happy").
 		Off("happy", happy).
 		Emit("happy", "调用off后再次触发happy 此时不会触发")
+
+	t.Log("测试recover")
+	trigger.
+		Emit("sad", 1)
 }
