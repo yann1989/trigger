@@ -8,16 +8,17 @@ import (
 	"sync"
 )
 
-// 事件最大监听数量
+// 事件默认最大监听数量
 const defaultMaxListeners = 16
 
 // 错误
 var ErrNotFunction = errors.New("传入参数不是函数类型.")
 var ErrExceedMaxListeners = errors.New("此事件超过最大监听数量.")
 
-// RecoveryFunc ...
+// 错误处理函数
 type RecoveryFunc func(interface{}, interface{}, error)
 
+// 默认错误处理函数
 var defaultRecoveryFunc RecoveryFunc = func(event interface{}, listener interface{}, err error) {
 	fmt.Fprintf(os.Stdout, "Error: 事件[%v]\n错误: %v.\n", event, err)
 }
