@@ -1,3 +1,3 @@
-module my_event
+github.com/yann1989/trigger
 
-go 1.15
+go 1.14
